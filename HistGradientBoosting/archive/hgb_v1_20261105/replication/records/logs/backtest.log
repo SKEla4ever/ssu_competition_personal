@@ -1,0 +1,16 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+backtest off_market native/log_price leaves=63 minleaf=20 2025-12: i800 train=6.535% future=9.079%; fit=4.12s; physical_fits=175
+backtest off_market native/log_price leaves=63 minleaf=20 2026-01: i800 train=6.530% future=8.643%; fit=4.40s; physical_fits=176
+backtest off_market native/log_price leaves=63 minleaf=20 2026-02: i800 train=6.587% future=8.467%; fit=4.45s; physical_fits=177
+backtest off_market native/log_price leaves=63 minleaf=20 2026-03: i800 train=6.571% future=8.495%; fit=4.26s; physical_fits=178
+backtest off_market native/log_price leaves=63 minleaf=20 2026-04: i800 train=6.604% future=8.409%; fit=4.55s; physical_fits=179
+backtest off_market native/log_price leaves=63 minleaf=20 2026-05: i800 train=6.585% future=8.793%; fit=4.41s; physical_fits=180
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2025-12: i400 train=4.476% future=3.937%; fit=19.84s; physical_fits=181
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2026-01: i400 train=4.457% future=4.105%; fit=19.68s; physical_fits=182
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2026-02: i400 train=4.454% future=4.434%; fit=20.46s; physical_fits=183
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2026-03: i400 train=4.455% future=4.195%; fit=20.75s; physical_fits=184
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2026-04: i400 train=4.455% future=4.370%; fit=20.68s; physical_fits=185
+backtest list_aware onehot/log_ratio leaves=63 minleaf=50 2026-05: i400 train=4.446% future=4.597%; fit=21.26s; physical_fits=186

@@ -1,0 +1,72 @@
+{
+  "mode": "refit",
+  "status": "matched_reference",
+  "created_utc": "2026-11-05T17:47:39.387254+00:00",
+  "archive_verification": {
+    "passed": true,
+    "files_checked": 439,
+    "manifest_sha256": "286e05421c28f72c3d7a21e83633e71f9a5bf77dab6c1aca8da7226ac2de7f89"
+  },
+  "frozen_config_sha256": "1f0eef475c4b5b0f0589bbe683c3b6b2b1f483df40effda16e495e56f604c2e7",
+  "python": "3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "pyarrow": "22.0.0",
+    "joblib": "1.6.0"
+  },
+  "thread_settings": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "elapsed_seconds": 27.74935179197928,
+  "tracks": {
+    "off_market": {
+      "submission_checker": "passed",
+      "rows": 3974,
+      "ids_and_order_match": true,
+      "rounded_prices_match_exactly": true,
+      "rounded_price_differences": 0,
+      "generated_csv_sha256": "8669c8c025e7070ef1157aab53d49514c13b17802619ee9d81c59cc52b4e4168",
+      "archived_csv_sha256": "8669c8c025e7070ef1157aab53d49514c13b17802619ee9d81c59cc52b4e4168",
+      "n_train": 150000,
+      "training_cutoff_exclusive": "2026-06-01",
+      "fit_seconds": 5.8495390840107575,
+      "iterations": 800,
+      "raw_predictions_match_bitwise": true,
+      "raw_predictions_allclose": true,
+      "raw_comparison_rtol": 1e-10,
+      "raw_comparison_atol": 1e-06,
+      "max_absolute_price_difference": 0.0,
+      "mean_absolute_price_difference": 0.0,
+      "max_relative_price_difference": 0.0,
+      "refit_model_reload_allclose": true,
+      "refit_model_sha256": "7bde57f5b2dec23626d24312e070c58c607073995ad14eece0d8e272b2df5e03"
+    },
+    "list_aware": {
+      "submission_checker": "passed",
+      "rows": 4064,
+      "ids_and_order_match": true,
+      "rounded_prices_match_exactly": true,
+      "rounded_price_differences": 0,
+      "generated_csv_sha256": "514d10a182ebe9b63968dd54b7e516e9053b0ed72df0bb84e9bd0e719a3527d7",
+      "archived_csv_sha256": "514d10a182ebe9b63968dd54b7e516e9053b0ed72df0bb84e9bd0e719a3527d7",
+      "n_train": 150000,
+      "training_cutoff_exclusive": "2026-06-01",
+      "fit_seconds": 21.189279207988875,
+      "iterations": 400,
+      "raw_predictions_match_bitwise": true,
+      "raw_predictions_allclose": true,
+      "raw_comparison_rtol": 1e-10,
+      "raw_comparison_atol": 1e-06,
+      "max_absolute_price_difference": 0.0,
+      "mean_absolute_price_difference": 0.0,
+      "max_relative_price_difference": 0.0,
+      "refit_model_reload_allclose": true,
+      "refit_model_sha256": "9ad5fbde9339703b5a003244d32093910592b77c8f326ccd3afcfdcd72e9a834"
+    }
+  },
+  "interpretation": "Refitting on another platform may change floating-point predictions or model bytes. The reported comparisons, not matching filenames, establish replication."
+}

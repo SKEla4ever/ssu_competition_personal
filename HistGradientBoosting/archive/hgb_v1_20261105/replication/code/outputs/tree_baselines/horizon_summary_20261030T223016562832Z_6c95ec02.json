@@ -1,0 +1,73 @@
+{
+  "phase": "horizon",
+  "run_id": "20261030T223016562832Z_6c95ec02",
+  "results": [
+    {
+      "experiment_id": "horizon_dt_off_market_d12_l20_20261030T223016562832Z_6c95ec02",
+      "track": "off_market",
+      "family": "dt",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 7773,
+      "mdape": 16.433942801974542,
+      "mape": 21.58327309132496,
+      "median_signed_error": 5.835645666204577
+    },
+    {
+      "experiment_id": "horizon_bagging_off_market_d12_l20_20261030T223016562832Z_6c95ec02",
+      "track": "off_market",
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 7773,
+      "mdape": 15.624495236542135,
+      "mape": 20.577446694042354,
+      "median_signed_error": 5.222321864233498
+    },
+    {
+      "experiment_id": "horizon_rf_off_market_d12_l20_20261030T223016562832Z_6c95ec02",
+      "track": "off_market",
+      "family": "rf",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 7773,
+      "mdape": 15.502925964925039,
+      "mape": 20.355122767712,
+      "median_signed_error": 5.182855466991125
+    },
+    {
+      "experiment_id": "horizon_dt_list_aware_d12_l50_20261030T223016562832Z_6c95ec02",
+      "track": "list_aware",
+      "family": "dt",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 7773,
+      "mdape": 4.89398481927121,
+      "mape": 6.170255448149707,
+      "median_signed_error": 0.40549008398404074
+    },
+    {
+      "experiment_id": "horizon_bagging_list_aware_d12_l50_20261030T223016562832Z_6c95ec02",
+      "track": "list_aware",
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 7773,
+      "mdape": 4.750812979661079,
+      "mape": 5.96436902581501,
+      "median_signed_error": 0.5630841028190475
+    },
+    {
+      "experiment_id": "horizon_rf_list_aware_d12_l50_20261030T223016562832Z_6c95ec02",
+      "track": "list_aware",
+      "family": "rf",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 7773,
+      "mdape": 4.750919323667405,
+      "mape": 5.990585778975026,
+      "median_signed_error": 0.8362133730051281
+    }
+  ],
+  "frozen_config_sha256": "961ee01dbecaaf3eeef945361d3c2de732d49ee7c01a3d836ab1d942be5a93b8"
+}

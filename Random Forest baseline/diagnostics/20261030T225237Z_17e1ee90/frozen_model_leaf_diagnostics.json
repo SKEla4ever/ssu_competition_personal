@@ -1,0 +1,18 @@
+{
+  "off_market": {
+    "family": "rf",
+    "n_trees": 300,
+    "mean_leaf_count": 657.68,
+    "bootstrap_weighted_mass_at_depth12": 0.8961134666666667,
+    "bootstrap_weighted_mass_in_leaves_over1000_unique_training_rows": 0.6133289555555556,
+    "bootstrap_weighted_mass_in_leaves_over1000_bootstrap_weight": 0.6691556888888889
+  },
+  "list_aware": {
+    "family": "bagging",
+    "n_trees": 300,
+    "mean_leaf_count": 1178.6666666666667,
+    "bootstrap_weighted_mass_at_depth12": 0.4936309111111111,
+    "bootstrap_weighted_mass_in_leaves_over1000_unique_training_rows": 3.78e-05,
+    "bootstrap_weighted_mass_in_leaves_over1000_bootstrap_weight": 0.0012156
+  }
+}

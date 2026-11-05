@@ -1,0 +1,15 @@
+{
+  "purpose": "diagnosis only, one development fold; no model selection or submission replacement",
+  "development_month": "2025-11",
+  "cutoff": "2025-11-01T00:00:00",
+  "n_train": 138064,
+  "n_recent_train": 22976,
+  "n_validation": 1867,
+  "holdout_previously_observed": true,
+  "new_probe_uses_holdout_labels": false,
+  "frozen_config_sha256_before": "961ee01dbecaaf3eeef945361d3c2de732d49ee7c01a3d836ab1d942be5a93b8",
+  "rf_diagnostic_n_estimators": 100,
+  "seed": 42,
+  "rf_comparison_note": "100 vs 100 trees isolates the capacity bundle; not directly identical to the 300-tree frozen score",
+  "capacity_bundle": "max_depth 12 -> 20 and min_samples_leaf 20/50 -> 5"
+}

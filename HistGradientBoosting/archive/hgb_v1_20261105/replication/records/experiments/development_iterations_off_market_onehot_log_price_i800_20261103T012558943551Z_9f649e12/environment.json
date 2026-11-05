@@ -1,0 +1,96 @@
+{
+  "python": "3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "pyarrow": "22.0.0",
+    "matplotlib": "3.10.9",
+    "joblib": "1.6.0"
+  },
+  "git_revision": "6c5831e12f523d617eccd1418d46a5cf2a0bb8b4",
+  "git_status": "M README.md\n M features.py\n M models.py\n M run.py\n?? DATA_QUALITY.md\n?? analysis/\n?? tests/test_hgb_models.py\n?? tests/test_hgb_runner.py\n?? tests/test_tree_models.py",
+  "source_sha256": {
+    "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+    "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+    "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+    "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+    "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+    "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+    "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+  },
+  "data_identity": {
+    "listings": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+      "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+      "bytes": 32881444
+    },
+    "off_market": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+      "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+      "bytes": 894758
+    },
+    "list_aware": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+      "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+      "bytes": 937141
+    }
+  },
+  "thread_settings": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "packages_all": {
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "numpy": "2.2.6",
+    "click": "8.5.0",
+    "packaging": "26.3",
+    "joblib": "1.6.0",
+    "matplotlib": "3.10.9",
+    "pyarrow": "22.0.0",
+    "scikit-learn": "1.7.2",
+    "Pygments": "2.21.0",
+    "filelock": "4.2.5",
+    "iniconfig": "2.3.1",
+    "pillow": "13.0.0",
+    "contourpy": "1.4.0",
+    "pluggy": "1.7.0",
+    "tqdm": "4.70.1",
+    "h11": "0.16.0",
+    "PyYAML": "6.0.3",
+    "huggingface_hub": "2.1.1",
+    "httpcore2": "2.16.0",
+    "pytest": "8.4.2",
+    "fsspec": "2026.9.0",
+    "truststore": "0.10.5",
+    "httpx2": "2.16.0",
+    "cycler": "0.12.1",
+    "pip": "24.2",
+    "pandas": "2.3.3",
+    "fonttools": "4.68.0",
+    "tzdata": "2026.6",
+    "threadpoolctl": "3.7.0",
+    "typing_extensions": "4.16.0",
+    "hf-xet": "1.8.0",
+    "python-dateutil": "3.0.0",
+    "anyio": "4.15.1",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0",
+    "scipy": "1.18.1",
+    "idna": "3.20",
+    "pytz": "2026.6"
+  },
+  "created_utc": "2026-11-03T01:25:58.968266+00:00",
+  "physical_fit_ids": [
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-06_20261103T012223156027Z_1ce77d8c",
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-07_20261103T012255556935Z_005fbf1a",
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-08_20261103T012332379657Z_48f2492b",
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-09_20261103T012410154389Z_67aebf1e",
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-10_20261103T012448341133Z_581ef9d5",
+    "physical_runs/b52f258949242dd73c5c81b6ba7c85eb778d97f78e5e9d97e593fe2fc608efc4/2025-11_20261103T012523455422Z_3d84aa5e"
+  ],
+  "fit_seconds_physical": 188.22602699999698,
+  "time_accounting": "shared across checkpoints; deduplicate by physical_fit_id"
+}

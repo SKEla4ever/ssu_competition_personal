@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-30T22:10:28.629788+00:00",
+  "development_months": [
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11"
+  ],
+  "holdout_months": [
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+  ],
+  "seed": 42,
+  "selection_run_id": "20261030T215048055388Z_752dcee0",
+  "tracks": {
+    "off_market": {
+      "family": "rf",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "selection_metric": "development pooled MdAPE (percent, unrounded predictions)",
+      "development_mdape": 16.78137917663917,
+      "selected_experiment_id": "development_rf_off_market_d12_l20_20261030T215048055388Z_752dcee0",
+      "complexity_experiment_id": "development_dt_off_market_d12_l20_20261030T215048055388Z_752dcee0",
+      "comparison": [
+        {
+          "experiment_id": "development_dt_off_market_d12_l20_20261030T215048055388Z_752dcee0",
+          "track": "off_market",
+          "family": "dt",
+          "max_depth": 12,
+          "min_samples_leaf": 20,
+          "n": 12169,
+          "mdape": 17.29195500451518,
+          "mape": 22.553832260156394,
+          "median_signed_error": 9.712215394318166
+        },
+        {
+          "experiment_id": "development_bagging_off_market_d12_l20_20261030T215048055388Z_752dcee0",
+          "track": "off_market",
+          "family": "bagging",
+          "max_depth": 12,
+          "min_samples_leaf": 20,
+          "n": 12169,
+          "mdape": 17.033120621883548,
+          "mape": 21.885821108852625,
+          "median_signed_error": 9.490274869392804
+        },
+        {
+          "experiment_id": "development_rf_off_market_d12_l20_20261030T215048055388Z_752dcee0",
+          "track": "off_market",
+          "family": "rf",
+          "max_depth": 12,
+          "min_samples_leaf": 20,
+          "n": 12169,
+          "mdape": 16.78137917663917,
+          "mape": 21.66768116861312,
+          "median_signed_error": 9.39237003976843
+        }
+      ],
+      "model_config": {
+        "options": {
+          "track": "off_market",
+          "family": "rf",
+          "max_depth": 12,
+          "min_samples_leaf": 20,
+          "n_estimators": 300,
+          "random_state": 42,
+          "n_jobs": -1
+        },
+        "estimator_class": "RandomForestRegressor",
+        "estimator_params": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "criterion": "squared_error",
+          "max_depth": 12,
+          "max_features": 0.7,
+          "max_leaf_nodes": null,
+          "max_samples": 1.0,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 20,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 300,
+          "n_jobs": -1,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "raw_features": [
+          "house_area",
+          "bedrooms",
+          "washrooms",
+          "parking_total",
+          "garage",
+          "lot_front",
+          "lot_depth",
+          "latitude",
+          "longitude",
+          "date_listed",
+          "house_type_name",
+          "house_style",
+          "municipality",
+          "community"
+        ],
+        "preprocessing": {
+          "numeric_features": [
+            "square_feet",
+            "area_is_range",
+            "bedrooms",
+            "washrooms",
+            "parking_total",
+            "garage",
+            "garage_gt_parking",
+            "lot_front",
+            "lot_depth",
+            "lot_area",
+            "lot_missing",
+            "latitude",
+            "longitude",
+            "months_since_2021"
+          ],
+          "categorical_features": [
+            "house_type_name",
+            "house_style",
+            "municipality",
+            "community"
+          ],
+          "one_hot_encoder_params": {
+            "categories": "auto",
+            "drop": null,
+            "dtype": "float64",
+            "feature_name_combiner": "concat",
+            "handle_unknown": "ignore",
+            "max_categories": null,
+            "min_frequency": null,
+            "sparse_output": false
+          },
+          "sparse_threshold": 0.0,
+          "remainder": "drop",
+          "imputation": null,
+          "scaling": null,
+          "square_feet": "features.square_feet: exact or range midpoint",
+          "months_since_2021": "(date_listed - 2021-01-01).days / 30.44"
+        },
+        "target": "natural_log_sold_price",
+        "restore": "exp(mean_tree_log_predictions)"
+      }
+    },
+    "list_aware": {
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "selection_metric": "development pooled MdAPE (percent, unrounded predictions)",
+      "development_mdape": 4.9681557980482465,
+      "selected_experiment_id": "development_bagging_list_aware_d12_l50_20261030T215048055388Z_752dcee0",
+      "complexity_experiment_id": "development_dt_list_aware_d12_l50_20261030T215048055388Z_752dcee0",
+      "comparison": [
+        {
+          "experiment_id": "development_dt_list_aware_d12_l50_20261030T215048055388Z_752dcee0",
+          "track": "list_aware",
+          "family": "dt",
+          "max_depth": 12,
+          "min_samples_leaf": 50,
+          "n": 12169,
+          "mdape": 5.044191632437156,
+          "mape": 6.321436469407116,
+          "median_signed_error": 2.071779645196644
+        },
+        {
+          "experiment_id": "development_bagging_list_aware_d12_l50_20261030T215048055388Z_752dcee0",
+          "track": "list_aware",
+          "family": "bagging",
+          "max_depth": 12,
+          "min_samples_leaf": 50,
+          "n": 12169,
+          "mdape": 4.9681557980482465,
+          "mape": 6.117584936993887,
+          "median_signed_error": 2.319515538500629
+        },
+        {
+          "experiment_id": "development_rf_list_aware_d12_l50_20261030T215048055388Z_752dcee0",
+          "track": "list_aware",
+          "family": "rf",
+          "max_depth": 12,
+          "min_samples_leaf": 50,
+          "n": 12169,
+          "mdape": 5.033164748970325,
+          "mape": 6.186635446773498,
+          "median_signed_error": 2.5800721086310996
+        }
+      ],
+      "model_config": {
+        "options": {
+          "track": "list_aware",
+          "family": "bagging",
+          "max_depth": 12,
+          "min_samples_leaf": 50,
+          "n_estimators": 300,
+          "random_state": 42,
+          "n_jobs": -1
+        },
+        "estimator_class": "RandomForestRegressor",
+        "estimator_params": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "criterion": "squared_error",
+          "max_depth": 12,
+          "max_features": 1.0,
+          "max_leaf_nodes": null,
+          "max_samples": 1.0,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 50,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 300,
+          "n_jobs": -1,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "raw_features": [
+          "house_area",
+          "bedrooms",
+          "washrooms",
+          "parking_total",
+          "garage",
+          "lot_front",
+          "lot_depth",
+          "latitude",
+          "longitude",
+          "date_listed",
+          "house_type_name",
+          "house_style",
+          "municipality",
+          "community",
+          "list_price"
+        ],
+        "preprocessing": {
+          "numeric_features": [
+            "square_feet",
+            "area_is_range",
+            "bedrooms",
+            "washrooms",
+            "parking_total",
+            "garage",
+            "garage_gt_parking",
+            "lot_front",
+            "lot_depth",
+            "lot_area",
+            "lot_missing",
+            "latitude",
+            "longitude",
+            "months_since_2021",
+            "list_price"
+          ],
+          "categorical_features": [
+            "house_type_name",
+            "house_style",
+            "municipality",
+            "community"
+          ],
+          "one_hot_encoder_params": {
+            "categories": "auto",
+            "drop": null,
+            "dtype": "float64",
+            "feature_name_combiner": "concat",
+            "handle_unknown": "ignore",
+            "max_categories": null,
+            "min_frequency": null,
+            "sparse_output": false
+          },
+          "sparse_threshold": 0.0,
+          "remainder": "drop",
+          "imputation": null,
+          "scaling": null,
+          "square_feet": "features.square_feet: exact or range midpoint",
+          "months_since_2021": "(date_listed - 2021-01-01).days / 30.44"
+        },
+        "target": "natural_log_sold_price",
+        "restore": "exp(mean_tree_log_predictions)"
+      }
+    }
+  },
+  "selection_environment": {
+    "python": "3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "git_revision": "6c5831e12f523d617eccd1418d46a5cf2a0bb8b4",
+    "git_status": "M features.py\n M models.py\n M run.py\n?? DATA_QUALITY.md\n?? analysis/\n?? tests/test_tree_models.py",
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "2e6386f854b805760d2299f1c8442c917c0125efab0dfc1225bb58117ff1b39c",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    }
+  },
+  "selection_policy": "DT grid by pooled MdAPE; ties: depth ascending, leaf descending; family ties: DT, Bagging, RF",
+  "holdout_used_for_selection": false
+}

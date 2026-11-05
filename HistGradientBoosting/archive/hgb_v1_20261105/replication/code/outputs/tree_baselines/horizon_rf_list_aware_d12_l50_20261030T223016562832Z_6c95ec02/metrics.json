@@ -1,0 +1,11 @@
+{
+  "pooled": {
+    "n": 7773,
+    "mdape": 4.750919323667405,
+    "mape": 5.990585778975026,
+    "median_signed_error": 0.8362133730051281
+  },
+  "precision": "unrounded predictions",
+  "total_fit_seconds": 32.853809499996714,
+  "total_validation_predict_seconds": 0.14765491501020733
+}

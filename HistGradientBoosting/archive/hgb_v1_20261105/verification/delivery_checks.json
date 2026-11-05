@@ -1,0 +1,21 @@
+{
+  "archive_version": "hgb_v1_20261105",
+  "report_date": "2026-11-05",
+  "timezone": "America/Toronto",
+  "report_pages": 12,
+  "report_sha256": "712265bf134554999ec300b0e4a685af7c168ddf6c8262fc9b92e0c5566363e7",
+  "payload_manifest_sha256": "286e05421c28f72c3d7a21e83633e71f9a5bf77dab6c1aca8da7226ac2de7f89",
+  "payload_files_verified": 439,
+  "source_copied_suite": "76 passed in 18.93s",
+  "saved_inference": "exact rounded predictions match for both tracks",
+  "frozen_refit": "bitwise raw predictions and rounded CSV match for both tracks",
+  "original_formal_fits": 190,
+  "additional_archive_refits": 2,
+  "full_190_fit_search_reexecuted_for_archive": false,
+  "visual_qa": "12 rendered pages inspected; no missing glyphs, clipped figures, or blank pages",
+  "original_baseline_guard": {
+    "passed": true,
+    "protected_files": 359,
+    "guard_sha256": "8e388bef8eff27fa570d2e1e111009acda6e3d9336166bef1928b46641c4d736"
+  }
+}

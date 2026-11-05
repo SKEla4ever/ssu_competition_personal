@@ -1,0 +1,24 @@
+{
+  "report_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/reports/20261103T013911831599Z_b5580c05/evaluation_report.html",
+  "report_sha256": "3acd397298081531811b371828020458132aa2873b00ccbbfb41a1d15f343035",
+  "tests": {
+    "passed": 76,
+    "seconds": 18.35,
+    "log_sha256": "42d0f043a1ce79e9aa006fef46e18027faf5c0cd0301d38b23ae13c210beeb5c"
+  },
+  "successful_physical_fits": 190,
+  "frozen_config_sha256": "1f0eef475c4b5b0f0589bbe683c3b6b2b1f483df40effda16e495e56f604c2e7",
+  "original_baseline_guard": {
+    "passed": true,
+    "protected_files": 359,
+    "baseline_ast_unchanged": true,
+    "guard_sha256": "8e388bef8eff27fa570d2e1e111009acda6e3d9336166bef1928b46641c4d736"
+  },
+  "summary_sha256": {
+    "development": "4b8f770f8c7d720ec7aa371e60b9a747f89956e21c5236005350a40877a73743",
+    "backtest": "6861878e98f34b862d23c196abd1e4481b901f06023bb918b50aa6ab60116b72",
+    "horizon": "bd0a69b05b6bc470ce463f4ad7c27ed3569c5c67215227472a3deaa7170998a1",
+    "final": "52e24bc88cf20f5c7fe6df5a04053c028ab6d8b7d56b2846cb2e4255e1838f20"
+  },
+  "source_snapshot": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/final_runs/20261103T013703543927Z_b15b36d9/source_snapshot"
+}

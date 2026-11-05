@@ -1,0 +1,180 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+development off_market onehot/log_price leaves=31 minleaf=20 2025-06: i200 train=10.060% future=11.080%; fit=7.84s; physical_fits=1
+development off_market onehot/log_price leaves=31 minleaf=20 2025-07: i200 train=10.031% future=11.272%; fit=8.01s; physical_fits=2
+development off_market onehot/log_price leaves=31 minleaf=20 2025-08: i200 train=10.023% future=10.654%; fit=8.33s; physical_fits=3
+development off_market onehot/log_price leaves=31 minleaf=20 2025-09: i200 train=10.024% future=11.003%; fit=8.44s; physical_fits=4
+development off_market onehot/log_price leaves=31 minleaf=20 2025-10: i200 train=10.024% future=10.788%; fit=8.61s; physical_fits=5
+development off_market onehot/log_price leaves=31 minleaf=20 2025-11: i200 train=10.095% future=11.563%; fit=8.94s; physical_fits=6
+development off_market native/log_price leaves=31 minleaf=20 2025-06: i200 train=9.016% future=10.246%; fit=1.15s; physical_fits=7
+development off_market native/log_price leaves=31 minleaf=20 2025-07: i200 train=9.074% future=10.439%; fit=1.20s; physical_fits=8
+development off_market native/log_price leaves=31 minleaf=20 2025-08: i200 train=9.008% future=9.802%; fit=1.18s; physical_fits=9
+development off_market native/log_price leaves=31 minleaf=20 2025-09: i200 train=9.075% future=10.175%; fit=1.13s; physical_fits=10
+development off_market native/log_price leaves=31 minleaf=20 2025-10: i200 train=9.064% future=9.994%; fit=1.47s; physical_fits=11
+development off_market native/log_price leaves=31 minleaf=20 2025-11: i200 train=9.054% future=10.267%; fit=1.36s; physical_fits=12
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-06: i200 train=5.019% future=4.638%; fit=9.35s; physical_fits=13
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-07: i200 train=5.012% future=4.417%; fit=9.04s; physical_fits=14
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-08: i200 train=4.990% future=4.496%; fit=9.60s; physical_fits=15
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-09: i200 train=4.972% future=4.253%; fit=9.59s; physical_fits=16
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-10: i200 train=4.973% future=4.251%; fit=9.49s; physical_fits=17
+development list_aware onehot/log_price leaves=31 minleaf=20 2025-11: i200 train=4.961% future=4.337%; fit=9.62s; physical_fits=18
+development list_aware native/log_price leaves=31 minleaf=20 2025-06: i200 train=4.789% future=4.793%; fit=1.28s; physical_fits=19
+development list_aware native/log_price leaves=31 minleaf=20 2025-07: i200 train=4.778% future=4.543%; fit=1.44s; physical_fits=20
+development list_aware native/log_price leaves=31 minleaf=20 2025-08: i200 train=4.779% future=4.584%; fit=1.52s; physical_fits=21
+development list_aware native/log_price leaves=31 minleaf=20 2025-09: i200 train=4.750% future=4.375%; fit=1.28s; physical_fits=22
+development list_aware native/log_price leaves=31 minleaf=20 2025-10: i200 train=4.739% future=4.308%; fit=1.38s; physical_fits=23
+development list_aware native/log_price leaves=31 minleaf=20 2025-11: i200 train=4.740% future=4.402%; fit=1.31s; physical_fits=24
+development off_market onehot/log_price leaves=15 minleaf=20 2025-06: i200 train=10.908% future=11.686%; fit=6.77s; physical_fits=25
+development off_market onehot/log_price leaves=15 minleaf=20 2025-07: i200 train=10.911% future=12.698%; fit=7.10s; physical_fits=26
+development off_market onehot/log_price leaves=15 minleaf=20 2025-08: i200 train=10.949% future=11.707%; fit=7.17s; physical_fits=27
+development off_market onehot/log_price leaves=15 minleaf=20 2025-09: i200 train=10.947% future=11.837%; fit=7.06s; physical_fits=28
+development off_market onehot/log_price leaves=15 minleaf=20 2025-10: i200 train=10.952% future=11.482%; fit=7.29s; physical_fits=29
+development off_market onehot/log_price leaves=15 minleaf=20 2025-11: i200 train=10.966% future=11.968%; fit=7.29s; physical_fits=30
+development off_market onehot/log_price leaves=15 minleaf=50 2025-06: i200 train=10.930% future=11.820%; fit=7.04s; physical_fits=31
+development off_market onehot/log_price leaves=15 minleaf=50 2025-07: i200 train=10.894% future=12.640%; fit=7.06s; physical_fits=32
+development off_market onehot/log_price leaves=15 minleaf=50 2025-08: i200 train=10.937% future=11.696%; fit=7.17s; physical_fits=33
+development off_market onehot/log_price leaves=15 minleaf=50 2025-09: i200 train=10.923% future=11.732%; fit=7.17s; physical_fits=34
+development off_market onehot/log_price leaves=15 minleaf=50 2025-10: i200 train=10.994% future=11.527%; fit=7.62s; physical_fits=35
+development off_market onehot/log_price leaves=15 minleaf=50 2025-11: i200 train=10.978% future=11.969%; fit=7.48s; physical_fits=36
+development off_market onehot/log_price leaves=31 minleaf=50 2025-06: i200 train=9.988% future=10.940%; fit=8.30s; physical_fits=37
+development off_market onehot/log_price leaves=31 minleaf=50 2025-07: i200 train=10.001% future=11.357%; fit=8.16s; physical_fits=38
+development off_market onehot/log_price leaves=31 minleaf=50 2025-08: i200 train=10.015% future=10.594%; fit=8.21s; physical_fits=39
+development off_market onehot/log_price leaves=31 minleaf=50 2025-09: i200 train=10.007% future=10.801%; fit=8.32s; physical_fits=40
+development off_market onehot/log_price leaves=31 minleaf=50 2025-10: i200 train=10.061% future=10.492%; fit=8.41s; physical_fits=41
+development off_market onehot/log_price leaves=31 minleaf=50 2025-11: i200 train=10.043% future=11.386%; fit=8.54s; physical_fits=42
+development off_market onehot/log_price leaves=63 minleaf=20 2025-06: i200 train=9.137% future=10.406%; fit=9.19s; physical_fits=43
+development off_market onehot/log_price leaves=63 minleaf=20 2025-07: i200 train=9.106% future=10.755%; fit=9.41s; physical_fits=44
+development off_market onehot/log_price leaves=63 minleaf=20 2025-08: i200 train=9.154% future=10.119%; fit=9.52s; physical_fits=45
+development off_market onehot/log_price leaves=63 minleaf=20 2025-09: i200 train=9.117% future=10.246%; fit=9.61s; physical_fits=46
+development off_market onehot/log_price leaves=63 minleaf=20 2025-10: i200 train=9.181% future=10.055%; fit=9.80s; physical_fits=47
+development off_market onehot/log_price leaves=63 minleaf=20 2025-11: i200 train=9.210% future=10.906%; fit=9.89s; physical_fits=48
+development off_market onehot/log_price leaves=63 minleaf=50 2025-06: i200 train=9.165% future=10.225%; fit=9.30s; physical_fits=49
+development off_market onehot/log_price leaves=63 minleaf=50 2025-07: i200 train=9.126% future=10.620%; fit=9.43s; physical_fits=50
+development off_market onehot/log_price leaves=63 minleaf=50 2025-08: i200 train=9.165% future=9.839%; fit=9.59s; physical_fits=51
+development off_market onehot/log_price leaves=63 minleaf=50 2025-09: i200 train=9.155% future=10.347%; fit=9.77s; physical_fits=52
+development off_market onehot/log_price leaves=63 minleaf=50 2025-10: i200 train=9.201% future=10.137%; fit=9.89s; physical_fits=53
+development off_market onehot/log_price leaves=63 minleaf=50 2025-11: i200 train=9.174% future=10.863%; fit=10.52s; physical_fits=54
+development off_market native/log_price leaves=15 minleaf=20 2025-06: i200 train=9.681% future=10.762%; fit=0.96s; physical_fits=55
+development off_market native/log_price leaves=15 minleaf=20 2025-07: i200 train=9.694% future=11.192%; fit=0.97s; physical_fits=56
+development off_market native/log_price leaves=15 minleaf=20 2025-08: i200 train=9.678% future=10.414%; fit=0.96s; physical_fits=57
+development off_market native/log_price leaves=15 minleaf=20 2025-09: i200 train=9.676% future=10.360%; fit=0.95s; physical_fits=58
+development off_market native/log_price leaves=15 minleaf=20 2025-10: i200 train=9.696% future=10.327%; fit=0.97s; physical_fits=59
+development off_market native/log_price leaves=15 minleaf=20 2025-11: i200 train=9.700% future=10.515%; fit=1.09s; physical_fits=60
+development off_market native/log_price leaves=15 minleaf=50 2025-06: i200 train=9.648% future=10.721%; fit=0.99s; physical_fits=61
+development off_market native/log_price leaves=15 minleaf=50 2025-07: i200 train=9.643% future=10.901%; fit=0.95s; physical_fits=62
+development off_market native/log_price leaves=15 minleaf=50 2025-08: i200 train=9.662% future=10.304%; fit=1.05s; physical_fits=63
+development off_market native/log_price leaves=15 minleaf=50 2025-09: i200 train=9.656% future=10.477%; fit=1.03s; physical_fits=64
+development off_market native/log_price leaves=15 minleaf=50 2025-10: i200 train=9.665% future=10.257%; fit=1.21s; physical_fits=65
+development off_market native/log_price leaves=15 minleaf=50 2025-11: i200 train=9.689% future=10.567%; fit=1.01s; physical_fits=66
+development off_market native/log_price leaves=31 minleaf=50 2025-06: i200 train=8.950% future=10.169%; fit=1.14s; physical_fits=67
+development off_market native/log_price leaves=31 minleaf=50 2025-07: i200 train=8.972% future=10.374%; fit=1.15s; physical_fits=68
+development off_market native/log_price leaves=31 minleaf=50 2025-08: i200 train=9.000% future=9.563%; fit=1.11s; physical_fits=69
+development off_market native/log_price leaves=31 minleaf=50 2025-09: i200 train=9.040% future=9.956%; fit=1.25s; physical_fits=70
+development off_market native/log_price leaves=31 minleaf=50 2025-10: i200 train=9.025% future=10.048%; fit=1.18s; physical_fits=71
+development off_market native/log_price leaves=31 minleaf=50 2025-11: i200 train=8.991% future=10.276%; fit=1.15s; physical_fits=72
+development off_market native/log_price leaves=63 minleaf=20 2025-06: i200 train=8.242% future=9.838%; fit=1.67s; physical_fits=73
+development off_market native/log_price leaves=63 minleaf=20 2025-07: i200 train=8.285% future=10.152%; fit=1.63s; physical_fits=74
+development off_market native/log_price leaves=63 minleaf=20 2025-08: i200 train=8.257% future=9.375%; fit=1.59s; physical_fits=75
+development off_market native/log_price leaves=63 minleaf=20 2025-09: i200 train=8.300% future=9.593%; fit=1.70s; physical_fits=76
+development off_market native/log_price leaves=63 minleaf=20 2025-10: i200 train=8.262% future=9.290%; fit=1.74s; physical_fits=77
+development off_market native/log_price leaves=63 minleaf=20 2025-11: i200 train=8.238% future=9.506%; fit=1.73s; physical_fits=78
+development off_market native/log_price leaves=63 minleaf=50 2025-06: i200 train=8.204% future=9.800%; fit=1.99s; physical_fits=79
+development off_market native/log_price leaves=63 minleaf=50 2025-07: i200 train=8.217% future=10.027%; fit=1.43s; physical_fits=80
+development off_market native/log_price leaves=63 minleaf=50 2025-08: i200 train=8.216% future=9.180%; fit=1.70s; physical_fits=81
+development off_market native/log_price leaves=63 minleaf=50 2025-09: i200 train=8.260% future=9.687%; fit=1.50s; physical_fits=82
+development off_market native/log_price leaves=63 minleaf=50 2025-10: i200 train=8.235% future=9.389%; fit=1.58s; physical_fits=83
+development off_market native/log_price leaves=63 minleaf=50 2025-11: i200 train=8.236% future=9.421%; fit=1.57s; physical_fits=84
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-06: i200 train=5.169% future=4.741%; fit=7.81s; physical_fits=85
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-07: i200 train=5.156% future=4.563%; fit=7.65s; physical_fits=86
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-08: i200 train=5.141% future=4.545%; fit=7.76s; physical_fits=87
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-09: i200 train=5.131% future=4.535%; fit=8.31s; physical_fits=88
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-10: i200 train=5.110% future=4.406%; fit=8.06s; physical_fits=89
+development list_aware onehot/log_price leaves=15 minleaf=20 2025-11: i200 train=5.103% future=4.459%; fit=8.23s; physical_fits=90
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-06: i200 train=5.171% future=4.697%; fit=8.51s; physical_fits=91
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-07: i200 train=5.155% future=4.524%; fit=7.93s; physical_fits=92
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-08: i200 train=5.135% future=4.562%; fit=7.87s; physical_fits=93
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-09: i200 train=5.124% future=4.517%; fit=8.09s; physical_fits=94
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-10: i200 train=5.109% future=4.383%; fit=8.11s; physical_fits=95
+development list_aware onehot/log_price leaves=15 minleaf=50 2025-11: i200 train=5.095% future=4.439%; fit=8.20s; physical_fits=96
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-06: i200 train=5.016% future=4.651%; fit=9.14s; physical_fits=97
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-07: i200 train=5.002% future=4.422%; fit=9.26s; physical_fits=98
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-08: i200 train=4.989% future=4.529%; fit=9.34s; physical_fits=99
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-09: i200 train=4.975% future=4.276%; fit=9.49s; physical_fits=100
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-10: i200 train=4.976% future=4.304%; fit=9.66s; physical_fits=101
+development list_aware onehot/log_price leaves=31 minleaf=50 2025-11: i200 train=4.954% future=4.272%; fit=9.81s; physical_fits=102
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-06: i200 train=4.830% future=4.554%; fit=10.41s; physical_fits=103
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-07: i200 train=4.821% future=4.420%; fit=10.87s; physical_fits=104
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-08: i200 train=4.805% future=4.424%; fit=10.91s; physical_fits=105
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-09: i200 train=4.801% future=4.353%; fit=11.00s; physical_fits=106
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-10: i200 train=4.791% future=4.226%; fit=11.35s; physical_fits=107
+development list_aware onehot/log_price leaves=63 minleaf=20 2025-11: i200 train=4.784% future=4.245%; fit=11.29s; physical_fits=108
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-06: i200 train=4.836% future=4.599%; fit=10.66s; physical_fits=109
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-07: i200 train=4.821% future=4.384%; fit=10.69s; physical_fits=110
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-08: i200 train=4.810% future=4.367%; fit=10.82s; physical_fits=111
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-09: i200 train=4.803% future=4.249%; fit=11.09s; physical_fits=112
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-10: i200 train=4.797% future=4.215%; fit=11.01s; physical_fits=113
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-11: i200 train=4.789% future=4.276%; fit=11.37s; physical_fits=114
+development list_aware native/log_price leaves=15 minleaf=20 2025-06: i200 train=4.951% future=4.806%; fit=1.08s; physical_fits=115
+development list_aware native/log_price leaves=15 minleaf=20 2025-07: i200 train=4.941% future=4.518%; fit=1.09s; physical_fits=116
+development list_aware native/log_price leaves=15 minleaf=20 2025-08: i200 train=4.940% future=4.668%; fit=1.12s; physical_fits=117
+development list_aware native/log_price leaves=15 minleaf=20 2025-09: i200 train=4.924% future=4.457%; fit=1.11s; physical_fits=118
+development list_aware native/log_price leaves=15 minleaf=20 2025-10: i200 train=4.913% future=4.314%; fit=1.11s; physical_fits=119
+development list_aware native/log_price leaves=15 minleaf=20 2025-11: i200 train=4.901% future=4.380%; fit=1.14s; physical_fits=120
+development list_aware native/log_price leaves=15 minleaf=50 2025-06: i200 train=4.946% future=4.790%; fit=1.08s; physical_fits=121
+development list_aware native/log_price leaves=15 minleaf=50 2025-07: i200 train=4.949% future=4.519%; fit=1.08s; physical_fits=122
+development list_aware native/log_price leaves=15 minleaf=50 2025-08: i200 train=4.940% future=4.714%; fit=1.11s; physical_fits=123
+development list_aware native/log_price leaves=15 minleaf=50 2025-09: i200 train=4.916% future=4.394%; fit=1.15s; physical_fits=124
+development list_aware native/log_price leaves=15 minleaf=50 2025-10: i200 train=4.912% future=4.270%; fit=1.16s; physical_fits=125
+development list_aware native/log_price leaves=15 minleaf=50 2025-11: i200 train=4.894% future=4.384%; fit=1.20s; physical_fits=126
+development list_aware native/log_price leaves=31 minleaf=50 2025-06: i200 train=4.773% future=4.787%; fit=1.28s; physical_fits=127
+development list_aware native/log_price leaves=31 minleaf=50 2025-07: i200 train=4.768% future=4.501%; fit=1.33s; physical_fits=128
+development list_aware native/log_price leaves=31 minleaf=50 2025-08: i200 train=4.765% future=4.502%; fit=1.31s; physical_fits=129
+development list_aware native/log_price leaves=31 minleaf=50 2025-09: i200 train=4.761% future=4.347%; fit=1.32s; physical_fits=130
+development list_aware native/log_price leaves=31 minleaf=50 2025-10: i200 train=4.738% future=4.249%; fit=1.35s; physical_fits=131
+development list_aware native/log_price leaves=31 minleaf=50 2025-11: i200 train=4.730% future=4.382%; fit=1.37s; physical_fits=132
+development list_aware native/log_price leaves=63 minleaf=20 2025-06: i200 train=4.578% future=4.647%; fit=1.53s; physical_fits=133
+development list_aware native/log_price leaves=63 minleaf=20 2025-07: i200 train=4.565% future=4.517%; fit=1.59s; physical_fits=134
+development list_aware native/log_price leaves=63 minleaf=20 2025-08: i200 train=4.545% future=4.439%; fit=1.60s; physical_fits=135
+development list_aware native/log_price leaves=63 minleaf=20 2025-09: i200 train=4.543% future=4.294%; fit=1.60s; physical_fits=136
+development list_aware native/log_price leaves=63 minleaf=20 2025-10: i200 train=4.542% future=4.256%; fit=1.59s; physical_fits=137
+development list_aware native/log_price leaves=63 minleaf=20 2025-11: i200 train=4.536% future=4.334%; fit=1.59s; physical_fits=138
+development list_aware native/log_price leaves=63 minleaf=50 2025-06: i200 train=4.564% future=4.664%; fit=1.55s; physical_fits=139
+development list_aware native/log_price leaves=63 minleaf=50 2025-07: i200 train=4.552% future=4.486%; fit=1.58s; physical_fits=140
+development list_aware native/log_price leaves=63 minleaf=50 2025-08: i200 train=4.537% future=4.406%; fit=1.66s; physical_fits=141
+development list_aware native/log_price leaves=63 minleaf=50 2025-09: i200 train=4.538% future=4.325%; fit=1.63s; physical_fits=142
+development list_aware native/log_price leaves=63 minleaf=50 2025-10: i200 train=4.535% future=4.240%; fit=1.64s; physical_fits=143
+development list_aware native/log_price leaves=63 minleaf=50 2025-11: i200 train=4.529% future=4.320%; fit=1.65s; physical_fits=144
+development off_market onehot/log_price leaves=63 minleaf=50 2025-06: i100 train=10.136% future=11.016%; i200 train=9.165% future=10.225%; i400 train=8.147% future=9.728%; i800 train=7.146% future=9.138%; fit=28.41s; physical_fits=145
+development off_market onehot/log_price leaves=63 minleaf=50 2025-07: i100 train=10.154% future=11.733%; i200 train=9.126% future=10.620%; i400 train=8.176% future=10.152%; i800 train=7.155% future=9.321%; fit=31.25s; physical_fits=146
+development off_market onehot/log_price leaves=63 minleaf=50 2025-08: i100 train=10.168% future=10.861%; i200 train=9.165% future=9.839%; i400 train=8.243% future=9.094%; i800 train=7.198% future=8.580%; fit=33.30s; physical_fits=147
+development off_market onehot/log_price leaves=63 minleaf=50 2025-09: i100 train=10.145% future=11.057%; i200 train=9.155% future=10.347%; i400 train=8.188% future=9.838%; i800 train=7.221% future=9.224%; fit=33.67s; physical_fits=148
+development off_market onehot/log_price leaves=63 minleaf=50 2025-10: i100 train=10.189% future=10.878%; i200 train=9.201% future=10.137%; i400 train=8.223% future=9.286%; i800 train=7.269% future=8.625%; fit=30.81s; physical_fits=149
+development off_market onehot/log_price leaves=63 minleaf=50 2025-11: i100 train=10.147% future=11.708%; i200 train=9.174% future=10.863%; i400 train=8.256% future=9.872%; i800 train=7.273% future=9.194%; fit=30.77s; physical_fits=150
+development off_market native/log_price leaves=63 minleaf=20 2025-06: i100 train=9.185% future=10.417%; i200 train=8.242% future=9.838%; i400 train=7.365% future=9.290%; i800 train=6.410% future=9.045%; fit=3.90s; physical_fits=151
+development off_market native/log_price leaves=63 minleaf=20 2025-07: i100 train=9.200% future=10.992%; i200 train=8.285% future=10.152%; i400 train=7.385% future=9.599%; i800 train=6.468% future=9.204%; fit=3.88s; physical_fits=152
+development off_market native/log_price leaves=63 minleaf=20 2025-08: i100 train=9.219% future=10.381%; i200 train=8.257% future=9.375%; i400 train=7.387% future=8.867%; i800 train=6.459% future=8.650%; fit=4.11s; physical_fits=153
+development off_market native/log_price leaves=63 minleaf=20 2025-09: i100 train=9.249% future=10.149%; i200 train=8.300% future=9.593%; i400 train=7.423% future=8.936%; i800 train=6.493% future=8.962%; fit=4.04s; physical_fits=154
+development off_market native/log_price leaves=63 minleaf=20 2025-10: i100 train=9.185% future=10.123%; i200 train=8.262% future=9.290%; i400 train=7.406% future=8.988%; i800 train=6.484% future=8.537%; fit=3.95s; physical_fits=155
+development off_market native/log_price leaves=63 minleaf=20 2025-11: i100 train=9.205% future=10.346%; i200 train=8.238% future=9.506%; i400 train=7.398% future=9.006%; i800 train=6.509% future=8.822%; fit=4.08s; physical_fits=156
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-06: i100 train=5.034% future=4.585%; i200 train=4.836% future=4.599%; i400 train=4.572% future=4.571%; i800 train=4.209% future=4.610%; fit=31.30s; physical_fits=157
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-07: i100 train=5.023% future=4.453%; i200 train=4.821% future=4.384%; i400 train=4.566% future=4.390%; i800 train=4.205% future=4.433%; fit=33.02s; physical_fits=158
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-08: i100 train=5.003% future=4.555%; i200 train=4.810% future=4.367%; i400 train=4.559% future=4.339%; i800 train=4.202% future=4.382%; fit=33.50s; physical_fits=159
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-09: i100 train=4.995% future=4.340%; i200 train=4.803% future=4.249%; i400 train=4.566% future=4.222%; i800 train=4.201% future=4.250%; fit=34.22s; physical_fits=160
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-10: i100 train=4.981% future=4.382%; i200 train=4.797% future=4.215%; i400 train=4.545% future=4.146%; i800 train=4.203% future=4.110%; fit=34.21s; physical_fits=161
+development list_aware onehot/log_price leaves=63 minleaf=50 2025-11: i100 train=4.973% future=4.400%; i200 train=4.789% future=4.276%; i400 train=4.532% future=4.212%; i800 train=4.189% future=4.273%; fit=34.06s; physical_fits=162
+development list_aware native/log_price leaves=63 minleaf=50 2025-06: i100 train=4.778% future=4.718%; i200 train=4.564% future=4.664%; i400 train=4.267% future=4.613%; i800 train=3.832% future=4.672%; fit=4.65s; physical_fits=163
+development list_aware native/log_price leaves=63 minleaf=50 2025-07: i100 train=4.764% future=4.541%; i200 train=4.552% future=4.486%; i400 train=4.256% future=4.536%; i800 train=3.838% future=4.429%; fit=4.67s; physical_fits=164
+development list_aware native/log_price leaves=63 minleaf=50 2025-08: i100 train=4.748% future=4.637%; i200 train=4.537% future=4.406%; i400 train=4.255% future=4.449%; i800 train=3.835% future=4.464%; fit=5.39s; physical_fits=165
+development list_aware native/log_price leaves=63 minleaf=50 2025-09: i100 train=4.748% future=4.363%; i200 train=4.538% future=4.325%; i400 train=4.261% future=4.360%; i800 train=3.852% future=4.376%; fit=4.81s; physical_fits=166
+development list_aware native/log_price leaves=63 minleaf=50 2025-10: i100 train=4.736% future=4.234%; i200 train=4.535% future=4.240%; i400 train=4.258% future=4.200%; i800 train=3.855% future=4.070%; fit=4.77s; physical_fits=167
+development list_aware native/log_price leaves=63 minleaf=50 2025-11: i100 train=4.735% future=4.344%; i200 train=4.529% future=4.320%; i400 train=4.253% future=4.378%; i800 train=3.837% future=4.313%; fit=4.76s; physical_fits=168
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-06: i400 train=4.519% future=4.509%; fit=18.81s; physical_fits=169
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-07: i400 train=4.507% future=4.357%; fit=18.66s; physical_fits=170
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-08: i400 train=4.504% future=4.237%; fit=19.26s; physical_fits=171
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-09: i400 train=4.496% future=4.235%; fit=19.54s; physical_fits=172
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-10: i400 train=4.484% future=4.074%; fit=19.35s; physical_fits=173
+development list_aware onehot/log_ratio leaves=63 minleaf=50 2025-11: i400 train=4.481% future=4.159%; fit=19.56s; physical_fits=174
+FROZEN off_market: {'track': 'off_market', 'encoding': 'native', 'target_mode': 'log_price', 'categorical_features': 'from_dtype', 'early_stopping': False, 'interaction_cst': None, 'l2_regularization': 0.0, 'learning_rate': 0.1, 'loss': 'squared_error', 'max_bins': 255, 'max_depth': None, 'max_features': 1.0, 'max_iter': 800, 'max_leaf_nodes': 63, 'min_samples_leaf': 20, 'monotonic_cst': None, 'n_iter_no_change': 10, 'quantile': None, 'random_state': 42, 'scoring': 'loss', 'tol': 1e-07, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}; pooled MdAPE=8.863695%
+FROZEN list_aware: {'track': 'list_aware', 'encoding': 'onehot', 'target_mode': 'log_ratio', 'categorical_features': 'from_dtype', 'early_stopping': False, 'interaction_cst': None, 'l2_regularization': 0.0, 'learning_rate': 0.1, 'loss': 'squared_error', 'max_bins': 255, 'max_depth': None, 'max_features': 1.0, 'max_iter': 400, 'max_leaf_nodes': 63, 'min_samples_leaf': 50, 'monotonic_cst': None, 'n_iter_no_change': 10, 'quantile': None, 'random_state': 42, 'scoring': 'loss', 'tol': 1e-07, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}; pooled MdAPE=4.263937%

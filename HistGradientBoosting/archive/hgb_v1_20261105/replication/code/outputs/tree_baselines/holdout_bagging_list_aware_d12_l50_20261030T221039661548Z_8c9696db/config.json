@@ -1,0 +1,110 @@
+{
+  "phase": "holdout",
+  "track": "list_aware",
+  "family": "bagging",
+  "model": {
+    "options": {
+      "track": "list_aware",
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n_estimators": 300,
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "estimator_class": "RandomForestRegressor",
+    "estimator_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": 1.0,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 50,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 300,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "raw_features": [
+      "house_area",
+      "bedrooms",
+      "washrooms",
+      "parking_total",
+      "garage",
+      "lot_front",
+      "lot_depth",
+      "latitude",
+      "longitude",
+      "date_listed",
+      "house_type_name",
+      "house_style",
+      "municipality",
+      "community",
+      "list_price"
+    ],
+    "preprocessing": {
+      "numeric_features": [
+        "square_feet",
+        "area_is_range",
+        "bedrooms",
+        "washrooms",
+        "parking_total",
+        "garage",
+        "garage_gt_parking",
+        "lot_front",
+        "lot_depth",
+        "lot_area",
+        "lot_missing",
+        "latitude",
+        "longitude",
+        "months_since_2021",
+        "list_price"
+      ],
+      "categorical_features": [
+        "house_type_name",
+        "house_style",
+        "municipality",
+        "community"
+      ],
+      "one_hot_encoder_params": {
+        "categories": "auto",
+        "drop": null,
+        "dtype": "float64",
+        "feature_name_combiner": "concat",
+        "handle_unknown": "ignore",
+        "max_categories": null,
+        "min_frequency": null,
+        "sparse_output": false
+      },
+      "sparse_threshold": 0.0,
+      "remainder": "drop",
+      "imputation": null,
+      "scaling": null,
+      "square_feet": "features.square_feet: exact or range midpoint",
+      "months_since_2021": "(date_listed - 2021-01-01).days / 30.44"
+    },
+    "target": "natural_log_sold_price",
+    "restore": "exp(mean_tree_log_predictions)"
+  },
+  "prediction_months": [
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+  ],
+  "sample_weight": "equal",
+  "training_window": "all sales strictly before cutoff",
+  "metric_prediction_column": "predicted_price_raw",
+  "evaluation_protocol": "sale-month cutoff; not strict listing-day valuation",
+  "frozen_config_sha256": "961ee01dbecaaf3eeef945361d3c2de732d49ee7c01a3d836ab1d942be5a93b8"
+}

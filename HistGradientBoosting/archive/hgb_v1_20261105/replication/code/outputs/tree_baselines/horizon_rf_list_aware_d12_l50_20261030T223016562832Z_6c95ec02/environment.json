@@ -1,0 +1,42 @@
+{
+  "python": "3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "pyarrow": "22.0.0",
+    "matplotlib": "3.10.9",
+    "joblib": "1.6.0"
+  },
+  "git_revision": "6c5831e12f523d617eccd1418d46a5cf2a0bb8b4",
+  "git_status": "M README.md\n M features.py\n M models.py\n M run.py\n?? DATA_QUALITY.md\n?? analysis/\n?? tests/test_tree_models.py",
+  "source_sha256": {
+    "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+    "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+    "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+    "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+    "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+    "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+  },
+  "data_identity": {
+    "listings": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+      "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+      "bytes": 32881444
+    },
+    "off_market": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+      "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+      "bytes": 894758
+    },
+    "list_aware": {
+      "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+      "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+      "bytes": 937141
+    }
+  },
+  "start_utc": "2026-10-30T22:34:30.420484+00:00",
+  "end_utc": "2026-10-30T22:35:04.164248+00:00",
+  "elapsed_seconds": 33.74301283300156
+}

@@ -1,0 +1,278 @@
+SSU Case Competition  |  Archive version 1.0  |  2026年11月5日
+我们已完成两条 tracks 的 HistGradientBoostingRegressor 方案，并保存 final fitted models、frozen configuration、完整 selection evidence 和 submission CSV。本报告说明实际 data processing、model selection、evaluation protocol 和 replication 操作，供后续接手或重复实验使用。
+在 reused rolling backtest 中，Off-market 的 pooled MdAPE 从原 RF 的 15.705% 降至 8.607%；List-aware 从原 Bagging 的 4.733% 降至 4.292%。这些月份已用于此前实验，因此结果用于比较方案，不能作为 untouched test performance。
+
+当前保存的两个 models
+Configuration | Off-market | List-aware
+Estimator | HistGradientBoostingRegressor | HistGradientBoostingRegressor
+Encoding | native categorical | OneHot
+Target | ln(sold_price) | ln(sold_price / list_price)
+Iterations | 800 | 400
+max_leaf_nodes | 63 | 63
+min_samples_leaf | 20 | 50
+Final training rows | 150,000 | 150,000
+Hidden prediction rows | 3,974 | 4,064
+
+阅读与执行入口
+第2至5页定义 data 与 model；第6至9页记录 search、backtests 和结果；第10至12页提供 package 结构、可执行 commands、完整性验证和 archival identity。附件 replication package 已包含原始三个 parquet files，后续无需重新下载数据。
+当前 HGB 通过 make_hgb_model(track, config_path) 或保存的 .joblib 调用。原 make_model(track) 与 run.py 仍使用先前 RF/Bagging；直接运行旧入口不会选择 HGB。
+原始实验共190次 formal physical fits，76项 tests 通过。为验证此次 archive，我们额外执行 saved-model inference 和两次 frozen-config refit；这些检查不参与 model selection。
+
+Data 范围与输入接口
+Input file | Rows | 用途
+listings.parquet | 150,000 | 有 sold_price 的历史 sales
+test_off_market.parquet | 3,974 | Off-market inference
+test_list_aware.parquet | 4,064 | List-aware inference
+Training sales 的 date_sold 覆盖 2021-01-01 至 2026-05-31。date_listed 覆盖 2020-02-19 至 2026-05-29，因此不能将所有 date features 都描述为始于2021年。Final fit 使用全部150,000条 records，要求 date_sold 严格早于 2026-06-01、ml_num 唯一、sold_price 为 positive finite。
+比赛指定 hidden prediction horizon 为 Jun–Sep 2026。两个 test files 没有 date_sold；其中还包含较早的 date_listed，不能通过挂牌日期推断它们的 sale month。Hidden targets 未公开，本报告不提供 hidden test MdAPE。
+
+读取与 availability
+data.load() 优先读取 DATA_DIR 中的 parquet，找不到 parquet 才尝试同名 CSV，并将 date_listed、date_sold、external_avm_estimate_date 解析为 datetime。仅在未设置 DATA_DIR 时调用 Hugging Face download。Archive 使用保留的 parquet 和 SHA256，避免后续 upstream dataset 变动。
+Validation 调用 data.hide_answers()，移除 sold_price、date_sold、days_on_market、external_avm_estimate、external_avm_estimate_date；Off-market 额外移除 list_price。随后 features.tree_features() 只读取 explicit whitelist，未列入的 columns 不进入 predictor matrix。
+
+Raw feature whitelist
+house_area, bedrooms, washrooms, parking_total, garage,
+lot_front, lot_depth, latitude, longitude, date_listed,
+house_type_name, house_style, municipality, community
+List-aware 另外读取 list_price。ml_num 仅用于 row identity 和 submission，不是 predictor；remarks 及 after-sale fields 均不进入 model。Missing required columns 或 passthrough numeric fields 的非法 text 会显式报错；house_area 按下一节规则解析。
+
+Data 处理边界
+本方案保留原始 sales records；没有另外做 outlier removal、winsorization、price clipping、scaling 或 mean/median imputation。garage 大于 parking_total 的记录保留原值并添加 flag，不自动纠正。Lot structural missing values 保留为 NaN。
+主要实现位置为 code/data.py 和 code/features.py。所有 fold 的 preprocessing 都只在各自 training rows 上学习，未用 future rows 预先确定 category levels。
+
+Feature construction 的完整规则
+Off-market 的 predictor 顺序为下表前14项 numeric/binary features，再接4项 categorical features。List-aware 在 categorical block 前增加 list_price。顺序保存在 frozen schema 和 fitted model 中。
+Feature | 实际 transformation
+square_feet | house_area 为 exact number 时取该数；range 取 midpoint，例如 900-1099 → 999.5。上界无法转换时用下界；下界无法转换时为 NaN。
+area_is_range | house_area 转为 string 后是否包含字符 -，输出0或1。
+bedrooms | pd.to_numeric(errors="raise")，保留 numeric value。
+washrooms | 同上。
+parking_total | 同上。
+garage | 同上；不因超过 parking_total 而改值。
+garage_gt_parking | int(garage > parking_total)。
+lot_front | Numeric conversion，保留 NaN。
+lot_depth | Numeric conversion，保留 NaN。
+lot_area | lot_front × lot_depth；NaN 按运算传播。
+lot_missing | int(lot_front 或 lot_depth 为 NaN)。
+latitude | Numeric conversion，保留原值。
+longitude | Numeric conversion，保留原值。
+months_since_2021 | (date_listed - 2021-01-01).days / 30.44；不是 calendar month index，早期挂牌可为负数。
+list_price | 仅 List-aware；numeric conversion，并在 log_ratio mode 中要求 positive finite。
+house_type_name | Categorical input，按当前 training fold 学习 levels。
+house_style | Categorical input，同上。
+municipality | Categorical input，同上。
+community | Categorical input，同上。
+Training 中 lot_front 与 lot_depth 各有87,263项 missing，占58.1753%。HGB 直接处理保留的 numeric NaN；lot_missing 同时提供 missing indicator。不要在 replication 中先填零或填 median，否则 predictor semantics 会改变。
+
+Estimator 与 target restoration
+本方案使用 scikit-learn 1.7.2 的 HistGradientBoostingRegressor。Histogram-based gradient boosting 将连续 features 分桶，在后续 iterations 中逐步修正 transformed-target loss。HGB 支持 numeric missing values 和 native categorical splits；这里同时比较了 OneHot 与 native encoding。[E1]
+
+Off-market
+z = ln(sold_price)
+f(X) approximates z
+predicted_log_price = f(X)
+predicted_price = exp(f(X))
+最终采用 native categorical encoding。每次 fit 从 training rows 的 observed nonmissing values 建立 pandas Categorical levels；predict 沿用保存的 levels，unseen category 转为 missing。每个 categorical column 的 cardinality 必须不超过 max_bins=255，否则报错。
+Final training 的四项 category counts 分别为 house_type_name 6、house_style 16、municipality 5、community 145。Estimator 接收18个 columns，即14个 numeric/binary 与4个 categorical columns。
+
+List-aware
+z = ln(sold_price) - ln(list_price)
+g(X) approximates z
+predicted_log_price = ln(list_price) + g(X)
+predicted_price = exp(predicted_log_price)
+list_price 同时是 numeric feature 和 restoration offset。Training 与 inference 的 list_price 必须 positive finite。两个 tracks 的 predict_log() 都返回最终 log(price)；只有 List-aware raw estimator.predict() 返回 log ratio。不要将它直接当作 log price。
+最终采用 dense OneHot matrix。Numeric features passthrough；OneHotEncoder 使用 handle_unknown="ignore"、sparse_output=False、drop=None、dtype=float64、categories="auto"。Unseen category 的对应 block 全零。ColumnTransformer 使用 remainder="drop" 和 sparse_threshold=0.0。Final estimator 接收187项 features，即15个 numeric/binary 与172个 indicators。
+OneHot 的 max_categories 和 min_frequency 均为 None，feature_name_combiner="concat"。虽然 estimator 参数仍记录 categorical_features="from_dtype"，该输入已是 numeric matrix，因此实际没有 native categorical splits。
+
+Objective 与 output
+每个 fit 使用完整过去 history、equal sample weights，以及 transformed target 上的 squared_error。Selection 使用 raw-price pooled MdAPE，二者是不同 objective。本版本没有 smearing correction 或 posthoc calibration；predict() 输出同输入顺序的一维 positive finite array。Metrics 使用 unrounded prices，submission 使用 numpy.round(price)。
+
+Frozen configuration 的完整记录
+以下值来自 records/frozen_config.json。Actual n_iter_ 分别为800和400。Common defaults 也一并保留，避免后续 scikit-learn defaults 改变。
+Option | Off-market | List-aware
+encoding | native | onehot
+target_mode | log_price | log_ratio
+max_iter | 800 | 400
+max_leaf_nodes | 63 | 63
+min_samples_leaf | 20 | 50
+Common estimator parameter | Value
+categorical_features | "from_dtype"
+early_stopping | false
+interaction_cst | null
+l2_regularization | 0.0
+learning_rate | 0.1
+loss | "squared_error"
+max_bins | 255
+max_depth | null
+max_features | 1.0
+monotonic_cst | null
+n_iter_no_change | 10
+quantile | null
+random_state | 42
+scoring | "loss"
+tol | 1e-07
+validation_fraction | 0.1
+verbose | 0
+warm_start | false
+early_stopping=False，因此 n_iter_no_change、tol 和 validation_fraction 是保留的 defaults，不触发 random validation split 或提前停止。warm_start=False，每个 physical fit 从头 training；iteration checkpoints 由一次800-iteration fit 的 staged_predict 产生。
+random_state=42 固定 estimator seed。记录的 thread settings 为 OMP_NUM_THREADS=4 与 OPENBLAS_NUM_THREADS=1。不同 hardware 或 library builds 仍可能产生 floating-point differences；replication 以实际 predictions comparisons 为准，不以 joblib byte hash 必然相同为前提。
+
+Model selection 与 experiment accounting
+Development 使用 Jun–Nov 2025 的六个 temporal folds。每个 fold 只使用 validation month 之前的 sales。November 曾用于早期 algorithm probe，因此整个 development 明确属于 adaptive selection。
+Stage | 测试内容 | 新增 physical fits
+A Reference | 2 tracks × 2 encodings × 6 folds；200 iterations，31 leaves，min leaf20。 | 24
+B Capacity | 每个 track/encoding 比较 leaves {15,31,63} × min leaf {20,50}。A结果在B中复用。 | 120
+C Iterations | 每个 track/encoding 保留一个 capacity；每fold从头fit800，评估100/200/400/800 checkpoints。 | 24
+D Target | 只对选中的 List-aware config 比较 log_price 与 log_ratio。 | 6
+Development total | Capacity grid 含A为144fits；加C与D。 | 174
+Rolling backtest | 2 tracks × 6 monthly refits。 | 12
+Horizon backtest | 2 tracks，各固定cutoff只fit一次。 | 2
+Final fit | 2 tracks，各使用全部150,000 sales。 | 2
+Original formal total | 不含 unit-test fixtures 或本次 archive replication checks。 | 190
+C阶段的24次 fits 产生96组 checkpoint fold evaluations，不能将它们重复计为96次 physical fits。每个 staged200 checkpoint 都与独立200-iteration fit 检查 row identity 和 predictions allclose。Training、recent-training 与 future metrics 均使用同一 checkpoint。
+
+Selection rule
+在六个月全部 evaluation rows 上 pooled 计算 raw-price MdAPE，取最小值；依次以 MAPE、较少 leaves、较少 iterations、较大 min_samples_leaf、OneHot优先于native、log_price优先于log_ratio作为 tie breakers。每个 track 最终统一选择一个 iteration count，不为每fold单独选最佳 checkpoint。
+Off-market 选 native / 63 leaves / min leaf20 / 800 iterations，development MdAPE为8.8637%。List-aware 选 OneHot / 63 leaves / min leaf50 / 400 iterations；将target从log_price改为log_ratio后，development MdAPE从4.3170%变为4.2639%。这是该config下的 ablation，不能单独证明ratio在所有models上更好。
+Config 于 2026-11-03 01:33 UTC 冻结，本版本新 backtest scores 未参与冻结选择。Search 属于 budget-limited sequential procedure，未联合穷举全部 capacity 与 iterations；Off-market 的63 leaves和800 iterations位于测试grid上界，不能称为global optimum。
+
+Temporal evaluation 与 metrics 定义
+Evaluation month | Training rows | Evaluation rows | 用途
+2025-06 | 127,762 | 2,283 | Development
+2025-07 | 130,045 | 2,068 | Development
+2025-08 | 132,113 | 1,666 | Development
+2025-09 | 133,779 | 2,035 | Development
+2025-10 | 135,814 | 2,250 | Development
+2025-11 | 138,064 | 1,867 | Development
+2025-12 | 139,931 | 1,238 | Reused rolling
+2026-01 | 141,169 | 1,058 | Reused rolling
+2026-02 | 142,227 | 1,442 | Reused rolling
+2026-03 | 143,669 | 1,816 | Reused rolling
+2026-04 | 145,485 | 2,224 | Reused rolling
+2026-05 | 147,709 | 2,291 | Reused rolling
+Rolling protocol：evaluation month为M时，training条件为date_sold < M的第一天，validation为date_sold属于M。每个月重新fit。每个track pooled development n=12,169，rolling n=10,069；两个tracks使用相同validation IDs与truth。
+Horizon protocol：两个tracks分别只fit一次，固定training cutoff为2026-02-01，training n=142,227；同一个model预测Feb–May2026，pooled n=7,773。Horizon index依次为1至4。它更接近固定model一次预测未来数月的submission场景。
+Rolling包含Dec–Jan而horizon不含，不能将两者pooled metrics之差全部归因于model更新频率。若要隔离更新效果，应比较共同Feb–May cohort。
+
+Metrics
+signed_error_i = 100 * (prediction_i - actual_i) / actual_i
+APE_i = abs(signed_error_i)
+MdAPE = median(APE_i)
+MAPE = mean(APE_i)
+Median signed error = median(signed_error_i)
+Log-price MSE = mean((ln(prediction_i) - ln(actual_i))**2)
+所有price metrics以percentage呈现；median signed error为正表示偏高估、负表示偏低估。Pooled MdAPE直接在所有evaluation rows上取median，并非monthly MdAPE的平均。100 − MdAPE不是classification accuracy。
+Reused表示这些periods在此前RF/Bagging评估中已被观察过。各fold仍不使用未来sale labels；但它们不再是untouched tests。此外，本protocol是sale-month evaluation，不是严格listing-day valuation：部分房屋可能在training cutoff前已经挂牌。
+
+Evaluation 结果与解释
+Phase and track | n | MdAPE | MAPE | Median signed
+Development Off-market | 12,169 | 8.864% | 11.754% | +1.995%
+Development List-aware | 12,169 | 4.264% | 5.301% | +1.191%
+Rolling Off-market | 10,069 | 8.607% | 11.431% | +0.037%
+Rolling List-aware | 10,069 | 4.292% | 5.362% | +0.618%
+Horizon Off-market | 7,773 | 9.086% | 11.724% | −3.114%
+Horizon List-aware | 7,773 | 4.244% | 5.424% | −0.571%
+
+与原 frozen references 的比较
+Cohort and metric | Original reference | HGB v1
+Off-market rolling MdAPE | RF 15.705% | 8.607%
+Off-market horizon MdAPE | RF 15.503% | 9.086%
+List-aware rolling MdAPE | Bagging 4.733% | 4.292%
+List-aware horizon MdAPE | Bagging 4.751% | 4.244%
+Off-market training MdAPE mean | RF 14.331% | 6.569%
+List-aware training MdAPE mean | Bagging 5.236% | 4.457%
+表中training数值为rolling六个fold各自full-history training MdAPE的平均。它们来自相同cutoffs、相同training rows的model比较，支持HGB对Off-market历史数据拟合能力更强。原RF的capacity限制与HGB的改善相符，但feature noise和不可观测信息仍可能限制可达到的error。
+不要将mean-of-fold training MdAPE与pooled future MdAPE简单相减后称为standard generalization gap：cohorts、时间分布和aggregation都不同。当前还保存了recent12-month training metrics，供分离history跨度与future变化时使用。
+Off-market horizon median signed error为−3.114%，提示固定cutoff预测中存在低估倾向，值得在新development protocol中检验。该值不是已应用的calibration；本版本保持原始predictions。
+原HTML evaluation report逐项验证了12组HGB与RF/Bagging比较的IDs、truth及cutoffs，并核对18项environment evidence。按month、house type、community和true-price decile的diagnostics保存在附件中。True-price decile是事后诊断分组，不能仅凭tail error判断underfitting。
+
+按时间与 training cohort 的 diagnostics
+更完整的iteration selection和price-decile plots见 records/evaluation/evaluation_report.html。该HTML内嵌figures，可直接离线阅读；其中指向原workspace的artifact links仅用于历史追溯。
+
+Portable package 与最短 replication 路径
+解压HGB_v1_replication.zip后，进入replication目录。以下commands面向macOS/Linux；需要Python3.12。Archive保留了原parquet inputs，因此不用访问dataset download。
+Directory | 内容
+code/ | Final source snapshot、补全的run.py、tests、requirements lock及原12组RF/Bagging references。
+data/ | 三个原始parquet files，均有SHA256和bytes identity。
+models/ | Off-market与List-aware的final fitted joblib。
+expected_submissions/ | 原HGB v1的两个rounded submission CSV。
+records/ | Frozen config、summaries、45组virtual experiments、environment、logs、原HTML report。
+manifest.json | 439项payload files的SHA256和byte length。
+
+建立 environment
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r code/requirements-lock.txt
+.venv/bin/python verify_and_replicate.py verify
+原environment为Python3.12.5、macOS26.6.2 ARM64；numpy2.2.6、pandas2.3.3、scikit-learn1.7.2、pyarrow22.0.0、joblib1.6.0、matplotlib3.10.9。完整transitive versions见lock file，其中包含runner需要的filelock。
+
+复现 saved model inference
+.venv/bin/python verify_and_replicate.py infer \
+  --output ../inference_new
+Helper先核对全部payload hashes，再从models/加载model，核对其configuration与frozen config，输出新的CSV并与expected_submissions比较完整IDs、order和rounded prices。Output目录必须尚不存在；comparison.json记录结果。
+
+仅按 frozen config 重新 fit
+.venv/bin/python verify_and_replicate.py refit \
+  --output ../refit_new
+这只需2次fits，不重复search。Helper使用全部150,000条preJune sales，生成新joblibs和CSV，记录raw predictions的bitwise equality、allclose以及rounded differences，并检查reload。Exit0表示matching reference；exit1表示integrity/config/input失败；exit2表示操作完成但prediction comparison不同。
+请只加载本archive中已核对来源的joblib，并保持记录的environment。scikit-learn不保证跨版本加载兼容；不同platform的refit也不承诺相同bytes。[E2]
+
+完整 search 的执行顺序与验证
+完整重跑适用于验证selection procedure，需要原来的190次formal fits。在replication目录开始，使用尚未存在的新version，例如hgb_v2。不要将records目录当作可resume的hgb_v1输出。
+export DATA_DIR="$PWD/data"
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+export MPLBACKEND=Agg
+export MPLCONFIGDIR="$(mktemp -d)"
+export XDG_CACHE_HOME="$(mktemp -d)"
+cd code
+../.venv/bin/python -m pytest -q
+按顺序逐条执行，所有phase使用同一version：
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase development
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase backtest
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase horizon
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase predict
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase check
+../.venv/bin/python analysis/run_hgb_baselines.py \
+  --version hgb_v2 --phase report
+新models与summaries位于code/outputs/hgb_baselines/hgb_v2；CSV位于code/submissions/hgb_v2。不要同时启动同一version的多个phases；runner使用FileLock拒绝并发写入。Search中断后，只有source、data路径与内容、protocol及关键package versions均不变时，才可用同一version继续。
+
+此次 archive 的验证
+在复制后的source上重新执行原test suite：76 passed in 18.93s。Portable saved-model inference对两个tracks均通过submission checker，rounded predictions与原CSV完全一致。
+另外按frozen config完成两次refit；两个tracks的raw predictions均与归档model逐项完全一致，rounded CSV一致，reload检查通过。证据见verification/inference/comparison.json与verification/refit/comparison.json。本次没有重新执行完整190-fit search。
+Original run的source_snapshot遗漏run.py，但environment()需要读取其hash。新archive已补入与原environment SHA256一致的run.py。没有改写原source snapshot或历史manifests。
+
+Archival identity 与后续使用边界
+原model version为hgb_v1；final run ID为20261103T013703543927Z_b15b36d9。冻结时间为2026-11-03 01:33:11 UTC，final run完成于约01:37 UTC；Toronto当地日期为2026年11月2日。此report与portable archive制作于2026年11月5日。
+原Git revision为6c5831e12f523d617eccd1418d46a5cf2a0bb8b4，运行时存在dirty与untracked source。仅checkout该revision无法复现当前方案；应使用附件中经过source SHA256核对的code。
+
+关键 SHA256
+Frozen configuration
+1f0eef475c4b5b0f0589bbe683c3b6b2b1f483df40effda16e495e56f604c2e7
+Off-market fitted model
+b00438943aefa44f18f337df843692758433103a8141bab54ad92eaa7dbe6414
+List-aware fitted model
+48af38eaa43b37b7d0c09fa1ab83b6357ea01d8a96ffc29efac0e46e42b38906
+listings.parquet
+18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf
+test_off_market.parquet
+d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad
+test_list_aware.parquet
+ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35
+
+保留与变更规则
+records/final_summary.json保存了历史absolute paths，execution_contract.json的data identity也包含原本机路径。换机器后用portable helper进行inference或frozen refit；完整search创建新version。不要为了resume而手动改写历史contract、frozen config或hashes。
+Archive包含全部45组virtual experiment outputs和12组RF/Bagging references；未包含重复的physical-run cache，也未包含29MB的展开版diagnostics_long.csv。所需diagnostic JSON、主要CSV和原HTML均保留。Original baseline guard记录359项受保护artifacts及baseline AST检查通过；新portable copy的保护范围按自身实际files重新建立。
+后续若扩展capacity、加入recent-data weighting或calibration，必须另建version并记录新的selection protocol。由于现有backtest periods已被观察，若要获得更可信的最终evaluation，应使用后续新增labels建立新的forward test；当前hidden targets仍未公开。
+
+证据与 documentation
+Project evidence：records/frozen_config.json；development_summary.json、backtest_summary.json、horizon_summary.json、final_summary.json；records/final/environment.json与delivery_manifest.json；records/evaluation/phase_comparison.csv、training_diagnostic_comparison.csv与identity_checks.json；code/models.py、features.py、data.py、analysis/run_hgb_baselines.py。
+[E1] scikit-learn 1.7.2 HistGradientBoostingRegressor API documentation。Accessed 2026-11-05。
+https://scikit-learn.org/1.7/modules/generated/
+sklearn.ensemble.HistGradientBoostingRegressor.html
+[E2] scikit-learn 1.7.2 Model persistence。Accessed 2026-11-05。
+https://scikit-learn.org/1.7/model_persistence.html

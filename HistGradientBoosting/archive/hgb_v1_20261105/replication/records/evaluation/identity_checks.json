@@ -1,0 +1,218 @@
+[
+  {
+    "phase": "development",
+    "track": "off_market",
+    "reference_family": "bagging",
+    "n": 12169,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_iterations_off_market_native_log_price_i800_20261103T012630059266Z_23f7c99a/predictions.csv",
+    "hgb_sha256": "44d7d83c0fd6527d25e3778441ba5e421804cbebd392f972bd2562b63d6a7089",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_bagging_off_market_d12_l20_20261030T215048055388Z_752dcee0/predictions.csv",
+    "reference_sha256": "49a53cd4bb3a7e2fa26b12c6c2225beb88e948015468d10e66132a2a65c7d81c",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "development",
+    "track": "off_market",
+    "reference_family": "rf",
+    "n": 12169,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_iterations_off_market_native_log_price_i800_20261103T012630059266Z_23f7c99a/predictions.csv",
+    "hgb_sha256": "44d7d83c0fd6527d25e3778441ba5e421804cbebd392f972bd2562b63d6a7089",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_rf_off_market_d12_l20_20261030T215048055388Z_752dcee0/predictions.csv",
+    "reference_sha256": "147ba87930956f276c4437bbb71a92c12b6fce2b84f571109f257e67d1a1b9bd",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "development",
+    "track": "list_aware",
+    "reference_family": "bagging",
+    "n": 12169,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_target_list_aware_onehot_log_ratio_i400_20261103T013309883045Z_4298254a/predictions.csv",
+    "hgb_sha256": "21272a66c65f61967a19ee3a3ec4ccfff82126fb86c47704dc89dbbc2b640629",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_bagging_list_aware_d12_l50_20261030T215048055388Z_752dcee0/predictions.csv",
+    "reference_sha256": "57493bff964fb68bc53c76321d9452b9d2beac572a907a514e186eb363f8559c",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "development",
+    "track": "list_aware",
+    "reference_family": "rf",
+    "n": 12169,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_target_list_aware_onehot_log_ratio_i400_20261103T013309883045Z_4298254a/predictions.csv",
+    "hgb_sha256": "21272a66c65f61967a19ee3a3ec4ccfff82126fb86c47704dc89dbbc2b640629",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_rf_list_aware_d12_l50_20261030T215048055388Z_752dcee0/predictions.csv",
+    "reference_sha256": "7fcab33d1c09a68dc3c738bffe43f75599f69fabf517f19db5fb5a608f374004",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "backtest",
+    "track": "off_market",
+    "reference_family": "bagging",
+    "n": 10069,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_off_market_native_log_price_i800_20261103T013411159828Z_240a7419/predictions.csv",
+    "hgb_sha256": "03a25424ef7c8d5f8b6eda93af8f991befc8160a91a734016f45eb8c6123e60a",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_bagging_off_market_d12_l20_20261030T221039661548Z_8c9696db/predictions.csv",
+    "reference_sha256": "012b949968b45fc26bdd8c4786d12c9bc121d392bd8a90ab47ad1cf7a29f4d76",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "backtest",
+    "track": "off_market",
+    "reference_family": "rf",
+    "n": 10069,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_off_market_native_log_price_i800_20261103T013411159828Z_240a7419/predictions.csv",
+    "hgb_sha256": "03a25424ef7c8d5f8b6eda93af8f991befc8160a91a734016f45eb8c6123e60a",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_rf_off_market_d12_l20_20261030T221039661548Z_8c9696db/predictions.csv",
+    "reference_sha256": "5359d9a8e1b98a3852bf7b850f86b8c64dceffed6a4758ef7df5f803f78d3f41",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "backtest",
+    "track": "list_aware",
+    "reference_family": "bagging",
+    "n": 10069,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013630782937Z_4e8269bb/predictions.csv",
+    "hgb_sha256": "0229489b4c51ee78c06deefda873635083ff5ad2b21b5d47b409c8669b525d77",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_bagging_list_aware_d12_l50_20261030T221039661548Z_8c9696db/predictions.csv",
+    "reference_sha256": "bdb8de028006f11adfcfd0983f2c0498f3ecd3e437f93df9d780fec9f588484a",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "backtest",
+    "track": "list_aware",
+    "reference_family": "rf",
+    "n": 10069,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013630782937Z_4e8269bb/predictions.csv",
+    "hgb_sha256": "0229489b4c51ee78c06deefda873635083ff5ad2b21b5d47b409c8669b525d77",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_rf_list_aware_d12_l50_20261030T221039661548Z_8c9696db/predictions.csv",
+    "reference_sha256": "bd730bccadeea2907168a56f47000a2b5ad5b854107c174c628452af3636bae8",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "horizon",
+    "track": "off_market",
+    "reference_family": "bagging",
+    "n": 7773,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_off_market_native_log_price_i800_20261103T013638405600Z_2da40fff/predictions.csv",
+    "hgb_sha256": "9b61cfdba9b6e4428ad7ae0dae85a254dd986dcc0e219761ef99930b218ade84",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_bagging_off_market_d12_l20_20261030T223016562832Z_6c95ec02/predictions.csv",
+    "reference_sha256": "78df1f4e55ff1aca64417103dc61fafb4a372cb035b06d2f98023f25659f67c0",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "horizon",
+    "track": "off_market",
+    "reference_family": "rf",
+    "n": 7773,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_off_market_native_log_price_i800_20261103T013638405600Z_2da40fff/predictions.csv",
+    "hgb_sha256": "9b61cfdba9b6e4428ad7ae0dae85a254dd986dcc0e219761ef99930b218ade84",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_rf_off_market_d12_l20_20261030T223016562832Z_6c95ec02/predictions.csv",
+    "reference_sha256": "ffe562f8e08bda40a6626020ef161a192d9a2e9602234b213141d2abaf900e09",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "horizon",
+    "track": "list_aware",
+    "reference_family": "bagging",
+    "n": 7773,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013701509041Z_88511e44/predictions.csv",
+    "hgb_sha256": "af53f1a37d734c3098601c2c40a51c5867d563bf884be6c17652d01f5436d967",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_bagging_list_aware_d12_l50_20261030T223016562832Z_6c95ec02/predictions.csv",
+    "reference_sha256": "541152a3c9d23a8f1aaddbd7bff1aa1b8e8fe2f73b8f8ca226c382d64955e374",
+    "published_training_data_sha256_match": true
+  },
+  {
+    "phase": "horizon",
+    "track": "list_aware",
+    "reference_family": "rf",
+    "n": 7773,
+    "matched_fields": [
+      "ml_num",
+      "month",
+      "training_cutoff",
+      "sold_price"
+    ],
+    "status": "passed",
+    "hgb_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013701509041Z_88511e44/predictions.csv",
+    "hgb_sha256": "af53f1a37d734c3098601c2c40a51c5867d563bf884be6c17652d01f5436d967",
+    "reference_predictions": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_rf_list_aware_d12_l50_20261030T223016562832Z_6c95ec02/predictions.csv",
+    "reference_sha256": "36e94a430e53d17721eb547a1b83cad229b77863b4df4fbdaa4a64563d590712",
+    "published_training_data_sha256_match": true
+  }
+]

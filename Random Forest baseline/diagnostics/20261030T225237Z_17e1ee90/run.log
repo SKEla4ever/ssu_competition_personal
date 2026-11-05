@@ -1,0 +1,18 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+off_market dt_d12: train MdAPE=14.6812%, recent train=15.5313%, development=18.7330%, fit=1.19s
+off_market dt_d20: train MdAPE=12.6258%, recent train=12.9342%, development=16.2533%, fit=1.56s
+off_market dt_unrestricted_sanity: train MdAPE=0.0000%, recent train=0.0000%, development=17.8525%, fit=2.61s
+off_market rf100_d12: train MdAPE=14.2916%, recent train=14.8369%, development=18.1157%, fit=13.20s
+off_market rf100_d20_leaf5: train MdAPE=11.1401%, recent train=11.3099%, development=15.0118%, fit=16.39s
+off_market hgb_log_price: train MdAPE=10.0947%, recent train=10.3934%, development=11.5633%, fit=8.30s
+list_aware dt_d12: train MdAPE=5.3443%, recent train=4.6538%, development=5.0106%, fit=1.26s
+list_aware dt_d20: train MdAPE=5.2661%, recent train=4.5941%, development=4.9998%, fit=1.33s
+list_aware dt_unrestricted_sanity: train MdAPE=0.0000%, recent train=0.0000%, development=6.8445%, fit=2.19s
+list_aware rf100_d12: train MdAPE=5.2854%, recent train=4.6197%, development=4.9959%, fit=10.62s
+list_aware rf100_d20_leaf5: train MdAPE=3.6541%, recent train=3.1771%, development=4.8033%, fit=12.17s
+list_aware hgb_log_price: train MdAPE=4.9606%, recent train=4.2955%, development=4.3371%, fit=9.20s
+list_aware hgb_log_ratio: train MdAPE=4.8987%, recent train=4.2575%, development=4.2988%, fit=9.35s
+Saved /Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/Random Forest baseline/diagnostics/20261030T225237Z_17e1ee90

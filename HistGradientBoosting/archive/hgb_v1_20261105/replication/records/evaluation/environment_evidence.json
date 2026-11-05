@@ -1,0 +1,764 @@
+[
+  {
+    "phase": "development",
+    "track": "off_market",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_iterations_off_market_native_log_price_i800_20261103T012630059266Z_23f7c99a/environment.json",
+    "environment_sha256": "8791244fea8c846cf3211589eaf7bcb08de763fb5ad1d9bddc53ca9f08e556e5",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "development",
+    "track": "list_aware",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/development_target_list_aware_onehot_log_ratio_i400_20261103T013309883045Z_4298254a/environment.json",
+    "environment_sha256": "b67a85274a49093017ca25e260ace05b47c51811ca16dfff83a87a3221d82570",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "development",
+    "track": "off_market",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_bagging_off_market_d12_l20_20261030T215048055388Z_752dcee0/environment.json",
+    "environment_sha256": "592972f78efc51bc3c75a7e6ef3ba039290ff3eb4a4ea6c56cd996030d48a608",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "2e6386f854b805760d2299f1c8442c917c0125efab0dfc1225bb58117ff1b39c",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "development",
+    "track": "off_market",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_rf_off_market_d12_l20_20261030T215048055388Z_752dcee0/environment.json",
+    "environment_sha256": "e98b35ea31c55e17094013c4e4b4ed4215e7c9175fe16d1ab2fd563abc98fd97",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "2e6386f854b805760d2299f1c8442c917c0125efab0dfc1225bb58117ff1b39c",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "development",
+    "track": "list_aware",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_bagging_list_aware_d12_l50_20261030T215048055388Z_752dcee0/environment.json",
+    "environment_sha256": "bdb1857b5978fad928e40a6c739a8b134299eaa915c631becefafa200504d831",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "2e6386f854b805760d2299f1c8442c917c0125efab0dfc1225bb58117ff1b39c",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "development",
+    "track": "list_aware",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/development_rf_list_aware_d12_l50_20261030T215048055388Z_752dcee0/environment.json",
+    "environment_sha256": "84674cbd6d9737caaca23571818e8778ccf8f4d02aaa3d0c8fb47f6abf2ad1b5",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "2e6386f854b805760d2299f1c8442c917c0125efab0dfc1225bb58117ff1b39c",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "off_market",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_off_market_native_log_price_i800_20261103T013411159828Z_240a7419/environment.json",
+    "environment_sha256": "a657f693c4ec801078ceb5cf8649bd921684e768929339a9d45151af12acefad",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "list_aware",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/backtest_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013630782937Z_4e8269bb/environment.json",
+    "environment_sha256": "62e1c0d0fffcba7b8eb03dacd03216eeec3718f8756aec15e2d3d5c7e3c6c229",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "off_market",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_bagging_off_market_d12_l20_20261030T221039661548Z_8c9696db/environment.json",
+    "environment_sha256": "78400ba8b254ea16e00d0380afe0c16c44baefc1d4ab7dc4ce916d5fba38558f",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "63af048ef718c5d83a7951002905bfee3315bec6157d7204e4a3ba3634e10ced",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "off_market",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_rf_off_market_d12_l20_20261030T221039661548Z_8c9696db/environment.json",
+    "environment_sha256": "ab0ff59ba271ba9420a46ae1baa4e52eae9e9067e044a88175cfd1576d8b4096",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "63af048ef718c5d83a7951002905bfee3315bec6157d7204e4a3ba3634e10ced",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "list_aware",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_bagging_list_aware_d12_l50_20261030T221039661548Z_8c9696db/environment.json",
+    "environment_sha256": "1ce3a546e5d6d0fee2e5fe512e7b6c593a88da4eb3c09a5128b008174b3ef661",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "63af048ef718c5d83a7951002905bfee3315bec6157d7204e4a3ba3634e10ced",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "backtest",
+    "track": "list_aware",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/holdout_rf_list_aware_d12_l50_20261030T221039661548Z_8c9696db/environment.json",
+    "environment_sha256": "2e636fe6651e38efe7e4daf09c24f1d1e1391622d5a7c4fc47b81a8e09d3eaff",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "63af048ef718c5d83a7951002905bfee3315bec6157d7204e4a3ba3634e10ced",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "off_market",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_off_market_native_log_price_i800_20261103T013638405600Z_2da40fff/environment.json",
+    "environment_sha256": "7ba9aaf7e32863c5f5e1cd8903dd8d42831990daef3ff2903db341d8736c7d83",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "list_aware",
+    "model": "hgb",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/hgb_baselines/hgb_v1/experiments/horizon_frozen_evaluation_list_aware_onehot_log_ratio_i400_20261103T013701509041Z_88511e44/environment.json",
+    "environment_sha256": "8927ac387a0cd2fa6501350c79fe41713cf8135b47adeb817e5354384d83bd69",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "bbb0016863e191f52bbad7340fcc17b502768453acb331d91ef4fa91adbfec1d",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6",
+      "analysis/run_hgb_baselines.py": "92457ca92e4b99644f1b65835cf28a4d7ce016101945963cd0e6813969c14073"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "off_market",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_bagging_off_market_d12_l20_20261030T223016562832Z_6c95ec02/environment.json",
+    "environment_sha256": "8e246b73bcf7ee66ccd5964a915b7ee7720c0b48eba00fe3fa880167cc0ee7d7",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "off_market",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_rf_off_market_d12_l20_20261030T223016562832Z_6c95ec02/environment.json",
+    "environment_sha256": "b5ce207aff5695995826391d95111e0bfa9a7b49b3ffc3c8acc384a1bb21fc7d",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "list_aware",
+    "model": "bagging",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_bagging_list_aware_d12_l50_20261030T223016562832Z_6c95ec02/environment.json",
+    "environment_sha256": "927eae044a008b0f63a3e802c5a4a9582f50116dd77a4fcb61b84820aa825fec",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  },
+  {
+    "phase": "horizon",
+    "track": "list_aware",
+    "model": "rf",
+    "environment_path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU-Data-Dash/outputs/tree_baselines/horizon_rf_list_aware_d12_l50_20261030T223016562832Z_6c95ec02/environment.json",
+    "environment_sha256": "3302f6c046548572078d93cdc03b4fe4a817066d6be376401a60a5186e053d0d",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "pyarrow": "22.0.0",
+      "matplotlib": "3.10.9",
+      "joblib": "1.6.0"
+    },
+    "thread_settings": null,
+    "data_identity": {
+      "listings": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/listings.parquet",
+        "sha256": "18cf87fa122b544018fccbc15040403b0fed37080c44a75d1b55deca96d2c4bf",
+        "bytes": 32881444
+      },
+      "off_market": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_off_market.parquet",
+        "sha256": "d078d1bd652550a8bf33bbaa42af21e9a7ea6c42dfd53c57c083e5597165b1ad",
+        "bytes": 894758
+      },
+      "list_aware": {
+        "path": "/Users/lxb_happypuppy/Downloads/Study/SSU_CaseCompetition/SSU_data_dash/test_list_aware.parquet",
+        "sha256": "ef1b82d16d547199b93a4e1a27d1ff3946a327854c320956a32f437b81469b35",
+        "bytes": 937141
+      }
+    },
+    "source_sha256": {
+      "models.py": "fc435df1d50906fa749988c61d4892d608ef0788678af4d220b5e4745db59b67",
+      "features.py": "e97996f920a150cc58b3830a6b9df1c317be0a5afb4c15b0f488ecaedbc6cfab",
+      "data.py": "ccb691af73e97e97f34e5a2dabcf935dd89d96206d8e73d0b82294a2b3445fa2",
+      "run.py": "423e80115df222362b18e82587a341f8a796c14552ad08deabdab1368c14b260",
+      "requirements.txt": "441385543039fa37a1be250e35954a5ad56fa2cd57fe6b47488f1cfea557c0dd",
+      "analysis/run_tree_baselines.py": "936e82c52f1d5c34541433f00b237f74528858435145a9d22777bcd4008575f6"
+    }
+  }
+]

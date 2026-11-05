@@ -1,0 +1,95 @@
+{
+  "phase": "holdout",
+  "run_id": "20261030T221039661548Z_8c9696db",
+  "results": [
+    {
+      "experiment_id": "holdout_dt_off_market_d12_l20_20261030T221039661548Z_8c9696db",
+      "track": "off_market",
+      "family": "dt",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 10069,
+      "mdape": 16.489170477755874,
+      "mape": 22.033252889211763,
+      "median_signed_error": 6.818846834373443
+    },
+    {
+      "experiment_id": "holdout_bagging_off_market_d12_l20_20261030T221039661548Z_8c9696db",
+      "track": "off_market",
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 10069,
+      "mdape": 15.885204878899977,
+      "mape": 20.973044840511832,
+      "median_signed_error": 6.2412066597814
+    },
+    {
+      "experiment_id": "holdout_rf_off_market_d12_l20_20261030T221039661548Z_8c9696db",
+      "track": "off_market",
+      "family": "rf",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 10069,
+      "mdape": 15.704624445728605,
+      "mape": 20.719978322420975,
+      "median_signed_error": 6.2497700795343984
+    },
+    {
+      "experiment_id": "holdout_starter_off_market_d12_l20_20261030T221039661548Z_8c9696db",
+      "track": "off_market",
+      "family": "starter",
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "n": 10069,
+      "mdape": 20.842835894893405,
+      "mape": 27.42972042946433,
+      "median_signed_error": 8.071434824476933
+    },
+    {
+      "experiment_id": "holdout_dt_list_aware_d12_l50_20261030T221039661548Z_8c9696db",
+      "track": "list_aware",
+      "family": "dt",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 10069,
+      "mdape": 4.835240339166926,
+      "mape": 6.104520068658635,
+      "median_signed_error": 0.8463441688067004
+    },
+    {
+      "experiment_id": "holdout_bagging_list_aware_d12_l50_20261030T221039661548Z_8c9696db",
+      "track": "list_aware",
+      "family": "bagging",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 10069,
+      "mdape": 4.733366325398,
+      "mape": 5.912139725588314,
+      "median_signed_error": 0.948054668924421
+    },
+    {
+      "experiment_id": "holdout_rf_list_aware_d12_l50_20261030T221039661548Z_8c9696db",
+      "track": "list_aware",
+      "family": "rf",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 10069,
+      "mdape": 4.746274356616319,
+      "mape": 5.939623425569793,
+      "median_signed_error": 1.2112892496667205
+    },
+    {
+      "experiment_id": "holdout_starter_list_aware_d12_l50_20261030T221039661548Z_8c9696db",
+      "track": "list_aware",
+      "family": "starter",
+      "max_depth": 12,
+      "min_samples_leaf": 50,
+      "n": 10069,
+      "mdape": 7.259332023575639,
+      "mape": 8.08503042713685,
+      "median_signed_error": 5.682137834036568
+    }
+  ],
+  "frozen_config_sha256": "961ee01dbecaaf3eeef945361d3c2de732d49ee7c01a3d836ab1d942be5a93b8"
+}
